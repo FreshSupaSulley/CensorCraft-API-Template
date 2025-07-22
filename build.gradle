@@ -106,7 +106,9 @@ sourceSets.main.resources { srcDir 'src/generated/resources' }
 
 repositories {
     // Put repositories for dependencies here
-    mavenLocal() // because the API is not on maven central atm
+    mavenLocal()
+    // ^ because the API is not on maven central atm
+    // ^ you don't need this if you pull in the lib yourself instead of publishing the API to your own maven local
     // Simple voice chat
     maven {
         name = "Modrinth"
