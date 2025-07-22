@@ -11,7 +11,7 @@ import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 public final class ExampleMod {
 	
 	public static final String MODID = "examplemod";
-	private static final Logger LOGGER = LogUtils.getLogger();
+	public static final Logger LOGGER = LogUtils.getLogger();
 	
 	public ExampleMod(FMLJavaModLoadingContext context)
 	{
