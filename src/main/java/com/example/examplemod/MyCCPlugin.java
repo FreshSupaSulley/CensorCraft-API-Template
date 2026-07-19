@@ -3,6 +3,7 @@ package com.example.examplemod;
 import io.github.freshsupasulley.censorcraft.api.CensorCraftPlugin;
 import io.github.freshsupasulley.censorcraft.api.ForgeCensorCraftPlugin;
 import io.github.freshsupasulley.censorcraft.api.events.PluginRegistration;
+import io.github.freshsupasulley.censorcraft.api.events.client.ClientPunishEvent;
 import io.github.freshsupasulley.censorcraft.api.events.client.SendTranscriptionEvent;
 
 @ForgeCensorCraftPlugin

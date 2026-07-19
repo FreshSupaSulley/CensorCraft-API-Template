@@ -105,12 +105,11 @@ dependencies {
     compileOnly "censorcraft:api:+"
     
     // Grab the mods for runtime. This needs to be updated to the CC version you want to build for
-    // This is for 2.2.0 AND YOU NEED TO UPDATE THIS FOR NEWEST VERSION!!
+    // This is for 4.0.0 AND YOU NEED TO UPDATE THIS FOR NEWEST VERSION!!
     // Find the file you need on CurseForge's website, open File Details, and find "Curse Maven Snippet":
-//    runtimeOnly "curse.maven:censorcraft-1249599:7020082"
-
-    // ^ at the time of writing this I am just manually pulling the v4.0.0 jar in from disk because I'm impatient
-    runtimeOnly "censorcraft:censorcraft:+"
+    runtimeOnly "curse.maven:censorcraft-1249599:8466160"
+    // in case you want to pull from disk:
+//    runtimeOnly "censorcraft:censorcraft:+"
 
     // You'll also need simple voice chat, which we're pulling from Modrinth here
     runtimeOnly fg.deobf("maven.modrinth:simple-voice-chat:forge-${voicechat_version}")
