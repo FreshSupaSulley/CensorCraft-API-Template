@@ -2,9 +2,8 @@ package com.example.examplemod;
 
 import io.github.freshsupasulley.censorcraft.api.CensorCraftPlugin;
 import io.github.freshsupasulley.censorcraft.api.ForgeCensorCraftPlugin;
-import io.github.freshsupasulley.censorcraft.api.events.EventRegistration;
+import io.github.freshsupasulley.censorcraft.api.events.PluginRegistration;
 import io.github.freshsupasulley.censorcraft.api.events.client.SendTranscriptionEvent;
-import io.github.freshsupasulley.censorcraft.api.events.server.ServerConfigEvent;
 
 @ForgeCensorCraftPlugin
 public class MyCCPlugin implements CensorCraftPlugin {
@@ -15,17 +14,12 @@ public class MyCCPlugin implements CensorCraftPlugin {
 	}
 	
 	@Override
-	public void registerEvents(EventRegistration registration)
+	public void register(PluginRegistration registration)
 	{
-		// To register punishments
-		registration.registerEvent(ServerConfigEvent.class, this::onServerConfig);
-		// To hook into other fun events
+		// Register punishments
+		registration.registerPunishment(HungerPunishment.class);
+		// Hook into other fun events
 		registration.registerEvent(SendTranscriptionEvent.class, this::sendTranscriptionEvent);
-	}
-	
-	public void onServerConfig(ServerConfigEvent event)
-	{
-		event.registerPunishment(HungerPunishment.class);
 	}
 	
 	// You are on the client-side with this event
